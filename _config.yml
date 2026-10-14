@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------
+# Site settings — edit these first
+# ---------------------------------------------------------------
+title: "[Lab Name]"
+short_name: "[LAB]"
+tagline: "[One-sentence description of what the lab studies]"
+description: "[Lab Name] at the University of Rhode Island — [research focus]."
+
+institution: "University of Rhode Island"
+department: "[Department Name]"
+pi_name: "Romesh Satish Prasad"
+email: "romeshsatish.prasad@uri.edu"
+address: |
+  [Building, Room]
+  [Street Address]
+  Kingston, RI 02881
+
+# Social / academic profiles (leave blank to hide)
+google_scholar: ""   # e.g. https://scholar.google.com/citations?user=XXXX
+orcid: ""            # e.g. https://orcid.org/0000-0000-0000-0000
+github: ""           # e.g. https://github.com/your-lab
+linkedin: ""
+
+# ---------------------------------------------------------------
+# GitHub Pages URL settings
+#   - Repo named <username>.github.io  -> baseurl: ""
+#   - Any other repo name (e.g. "lab") -> baseurl: "/lab"
+# ---------------------------------------------------------------
+url: "https://romeshprasad.github.io"
+baseurl: ""
+
+# Navigation menu (order matters)
+nav:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: People
+    url: /people/
+  - title: Publications
+    url: /publications/
+  - title: News
+    url: /news/
+  - title: Join Us
+    url: /join/
+  - title: Contact
+    url: /contact/
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
