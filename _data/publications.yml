@@ -1,0 +1,29 @@
+# Newest first. Lab member names can be wrapped in ** ** to bold them.
+# Optional links: pdf, doi, code, data, slides
+
+- year: 2026
+  title: "[Paper Title]"
+  authors: "**R. S. Prasad**, [Co-author], [Co-author]"
+  venue: "[Journal or Conference Name]"
+  type: journal        # journal | conference | preprint | book-chapter
+  doi: ""
+  pdf: ""
+  code: ""
+
+- year: 2025
+  title: "[Paper Title]"
+  authors: "[Co-author], **R. S. Prasad**"
+  venue: "[Conference Name]"
+  type: conference
+  doi: ""
+  pdf: ""
+  code: ""
+
+- year: 2025
+  title: "[Preprint Title]"
+  authors: "**R. S. Prasad**, [Co-author]"
+  venue: "arXiv"
+  type: preprint
+  doi: ""
+  pdf: ""
+  code: ""

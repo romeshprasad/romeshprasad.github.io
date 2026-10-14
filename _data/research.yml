@@ -1,0 +1,23 @@
+# Research thrusts. Shown as cards on the Home page and in detail on Research.
+
+- title: "[Research Area 1]"
+  summary: "[One or two sentences for the home page card.]"
+  description: |
+    [A longer paragraph for the Research page: the problem, why it matters,
+    and the approach the lab takes. Markdown is allowed.]
+  image: ""
+  funding: "[Funding agency, grant number — optional]"
+
+- title: "[Research Area 2]"
+  summary: "[One or two sentences for the home page card.]"
+  description: |
+    [Longer description.]
+  image: ""
+  funding: ""
+
+- title: "[Research Area 3]"
+  summary: "[One or two sentences for the home page card.]"
+  description: |
+    [Longer description.]
+  image: ""
+  funding: ""
