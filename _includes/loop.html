@@ -1,0 +1,28 @@
+<figure class="loop">
+  <svg viewBox="0 0 400 400" role="img" aria-labelledby="loop-title">
+    <title id="loop-title">The autonomous manufacturing loop: sense, decide, act, adapt</title>
+    <defs>
+      <marker id="loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" class="loop-head"/>
+      </marker>
+    </defs>
+
+    <path class="loop-arc" d="M256.9,72.1 A140,140 0 0 1 327.9,143.1" marker-end="url(#loop-arrow)"/>
+    <path class="loop-arc" d="M327.9,256.9 A140,140 0 0 1 256.9,327.9" marker-end="url(#loop-arrow)"/>
+    <path class="loop-arc" d="M143.1,327.9 A140,140 0 0 1 72.1,256.9" marker-end="url(#loop-arrow)"/>
+    <path class="loop-arc" d="M72.1,143.1 A140,140 0 0 1 143.1,72.1" marker-end="url(#loop-arrow)"/>
+
+    <text class="loop-center" x="200" y="190" text-anchor="middle">Physical</text>
+    <text class="loop-center" x="200" y="212" text-anchor="middle">manufacturing</text>
+    <text class="loop-center" x="200" y="234" text-anchor="middle">system</text>
+
+    {% assign nodes = "sense:200:60|decide:340:200|act:200:340|adapt:60:200" | split: "|" %}
+    {% for n in nodes %}
+      {% assign p = n | split: ":" %}
+      <a href="{{ '/research/' | relative_url }}#{{ p[0] }}">
+        <circle class="loop-node" cx="{{ p[1] }}" cy="{{ p[2] }}" r="46"/>
+        <text class="loop-label" x="{{ p[1] }}" y="{{ p[2] | plus: 6 }}" text-anchor="middle">{{ p[0] | capitalize }}</text>
+      </a>
+    {% endfor %}
+  </svg>
+</figure>

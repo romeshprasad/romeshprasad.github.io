@@ -1,29 +1,112 @@
-# Newest first. Lab member names can be wrapped in ** ** to bold them.
-# Optional links: pdf, doi, code, data, slides
+# Grouped by category on the Publications page, newest first within each.
+# Wrap your own name in ** ** to bold it. Optional links: url, pdf, code.
+# category: journal | conference | review | dissertation
 
-- year: 2026
-  title: "[Paper Title]"
-  authors: "**R. S. Prasad**, [Co-author], [Co-author]"
-  venue: "[Journal or Conference Name]"
-  type: journal        # journal | conference | preprint | book-chapter
-  doi: ""
-  pdf: ""
-  code: ""
+- category: journal
+  year: 2026
+  authors: "Eacuello, S.S., **Prasad, R.S.**, Sodhi, M.S."
+  title: "Multimodal Sensor Fusion and Temporal Deep Learning for Computer Numerical Control Toolpath and Condition Classification: A Cross-Validated Ablation Study"
+  venue: "Sensors, 26(8), 2405"
 
-- year: 2025
-  title: "[Paper Title]"
-  authors: "[Co-author], **R. S. Prasad**"
-  venue: "[Conference Name]"
-  type: conference
-  doi: ""
-  pdf: ""
-  code: ""
+- category: journal
+  year: 2025
+  authors: "**Prasad, R.**, Moon, Y."
+  title: "Recovery of Cyber Manufacturing Systems from False Data Injection Attacks on Sensors Using Reinforcement Learning"
+  venue: "Advanced Manufacturing, 2(1), 1–24"
 
-- year: 2025
-  title: "[Preprint Title]"
-  authors: "**R. S. Prasad**, [Co-author]"
-  venue: "arXiv"
-  type: preprint
-  doi: ""
-  pdf: ""
-  code: ""
+- category: journal
+  year: 2023
+  authors: "**Prasad, R.**, Mehr, S.A.Z., Moon, Y."
+  title: "Recovery Systems Architecture for Cyber-Manufacturing Systems Against Cyber-Manufacturing Attacks: Reinforcement Learning Approach"
+  venue: "Manufacturing Letters, 35, 851–860"
+
+- category: journal
+  year: 2022
+  authors: "**Prasad, R.**, Moon, Y."
+  title: "Architecture for Preventing and Detecting Cyber Attacks in Cyber-Manufacturing System"
+  venue: "IFAC-PapersOnLine, 55(10), 2246–2251"
+
+- category: journal
+  year: 2019
+  authors: "Zhang, S., Shapiro, N., Gehrke, G., Castner, J., Liu, Z., Guo, B., **Prasad, R.**, et al."
+  title: "Smartphone App for Residential Testing of Formaldehyde (SmART-Form)"
+  venue: "Building and Environment, 148, 567–578"
+
+- category: conference
+  year: 2026
+  authors: "Sodhi, M., **Prasad, R.**"
+  title: "Vehicle Routing Problem with Resource-Constrained Pickup and Delivery: A Heuristic-Informed BRKGA with Pattern-Based Analysis"
+  venue: "Genetic and Evolutionary Computation Conference (GECCO), 188–196"
+  award: "Best Paper Nominee"
+
+- category: conference
+  year: 2024
+  authors: "**Prasad, R.**, Hassanaly, M., Zhang, X., Sahu, A."
+  title: "Discovery of False Data Injection Schemes on Frequency Controllers with Reinforcement Learning"
+  venue: "IEEE Power & Energy Society General Meeting (PESGM)"
+
+- category: conference
+  year: 2022
+  authors: "**Prasad, R.**, Moon, Y."
+  title: "Comprehensive Analysis of Cyber-Manufacturing Attacks Using a Cyber-Manufacturing Testbed"
+  venue: "ASME International Mechanical Engineering Congress and Exposition (IMECE)"
+
+- category: conference
+  year: 2022
+  authors: "**Prasad, R.**, Swanson, M.K., Moon, Y."
+  title: "Recovering From Cyber-Manufacturing Attacks by Reinforcement Learning"
+  venue: "ASME International Mechanical Engineering Congress and Exposition (IMECE)"
+
+- category: conference
+  year: 2021
+  authors: "**Prasad, R.**, Moon, Y."
+  title: "Adaptive Intrusion Detection System for Cyber-Manufacturing System"
+  venue: "ASME International Mechanical Engineering Congress and Exposition (IMECE)"
+
+- category: conference
+  year: 2021
+  authors: "Akowuah, F., **Prasad, R.**, Espinoza, C.O., Kong, F."
+  title: "Recovery-by-Learning: Restoring Autonomous Cyber-Physical Systems from Sensor Attacks"
+  venue: "IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), 61–66"
+
+- category: review
+  year: 2026
+  authors: "**Prasad, R.**, Sodhi, M."
+  title: "Plug-and-Plan: A Minimal Coordination Interface for Vendor-Agnostic Orchestration of Heterogeneous Industrial Systems"
+  venue: "IEEE Transactions on Automation Science and Engineering"
+  status: "Under review"
+
+- category: review
+  year: 2026
+  authors: "**Prasad, R.**, Sodhi, M."
+  title: "Redeployable Resources in AGV-Integrated Job Shops: A Correspondence with Vehicle Routing"
+  venue: "International Journal of Production Research"
+  status: "Under review"
+
+- category: review
+  year: 2026
+  authors: "Sodhi, M., **Prasad, R.**, Saseendran, H."
+  title: "Tunable Recombination in Resource-Constrained Pickup and Delivery: A Two-Block Random-Key Representation, Injection Operators, and Certified Search for the VRP-RPD"
+  venue: "ACM Transactions on Evolutionary Learning and Optimization"
+  status: "Under review"
+
+- category: review
+  year: 2026
+  authors: "Saseendran, H., **Prasad, R.**, Sodhi, M."
+  title: "BrkgaCuda 3.0: A Multi-GPU Island Model Framework for Biased Random-Key Genetic Algorithms"
+  venue: "Journal of Parallel and Distributed Computing"
+  status: "Under review"
+
+- category: review
+  year: 2026
+  authors: "Sodhi, M., **Prasad, R.**, Saseendran, H."
+  title: "Vehicle Routing Problem with Resource-Constrained Pickup and Delivery"
+  venue: "arXiv:2602.23685"
+  status: "Preprint"
+  url: "https://arxiv.org/abs/2602.23685"
+
+- category: dissertation
+  year: 2024
+  authors: "**Prasad, R.S.S.**"
+  title: "Recovery of Cyber Manufacturing Systems from False Data Injection Attacks on Sensors by Reinforcement Learning"
+  venue: "Ph.D. Dissertation, Syracuse University"

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+
+{% if site.google_scholar != "" %}
+<p class="muted">Full record and citation counts on <a href="{{ site.google_scholar }}">Google Scholar</a>.</p>
+{% endif %}
+
+{% assign cats = "journal:Journal Articles|conference:Conference Papers|review:Under Review & Preprints|dissertation:Dissertation" | split: "|" %}
+{% for c in cats %}
+  {% assign parts = c | split: ":" %}
+  {% assign pubs = site.data.publications | where: "category", parts[0] %}
+  {% if pubs.size > 0 %}
+  <section class="pub-section">
+    <h2>{{ parts[1] }}</h2>
+    <ol class="pub-list">
+      {% for pub in pubs %}
+      <li>
+        <span class="pub-title">{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</span>
+        <span class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+        <span class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.year }}
+          {% if pub.award %}<span class="tag tag-award">{{ pub.award }}</span>{% endif %}
+          {% if pub.status %}<span class="tag">{{ pub.status }}</span>{% endif %}
+        </span>
+        {% if pub.pdf or pub.code %}
+        <span class="pub-links">
+          {% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}">PDF</a>{% endif %}
+          {% if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif %}
+        </span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+{% endfor %}

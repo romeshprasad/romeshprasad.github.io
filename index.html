@@ -1,0 +1,77 @@
+---
+layout: home
+---
+
+<section class="section about-grid">
+  <div>
+    <h2>About</h2>
+    <p>
+      I am a Postdoctoral Research Fellow at the University of Rhode Island, where I work on a
+      $10M Office of Naval Research program developing resilient, AI-enabled manufacturing and
+      operations systems. I received my Ph.D. in Mechanical Engineering from Syracuse University,
+      where I studied how reinforcement learning can help cyber-manufacturing systems recover
+      autonomously from sensor failures and attacks.
+    </p>
+    <p>
+      My work spans reinforcement learning, combinatorial optimization, multi-agent coordination,
+      and vendor-agnostic architectures for heterogeneous industrial equipment. I validate it on
+      physical robots, AGVs, conveyors, and machine tools, not in simulation alone.
+    </p>
+    <p>
+      I believe the goal of intelligent technology is not autonomy for its own sake. Intelligent
+      systems should absorb the operational complexity of coordinating machines, so that people can
+      focus on the problems that need human judgment, creativity, and expertise.
+      <a href="{{ '/vision/' | relative_url }}">Read more about the program I want to build →</a>
+    </p>
+  </div>
+  {% include loop.html %}
+</section>
+
+<section class="question">
+  <p class="eyebrow">The question that drives my research</p>
+  <blockquote>
+    How do we make manufacturing systems capable of turning intelligence into physical action,
+    reliably, adaptively, and across heterogeneous equipment?
+  </blockquote>
+</section>
+
+<section class="section">
+  <h2>Four connected directions</h2>
+  <div class="card-grid">
+    {% for area in site.data.research %}
+      <a class="card card-link" href="{{ '/research/' | relative_url }}#{{ area.id }}">
+        <span class="card-num">0{{ forloop.index }}</span>
+        <h3>{{ area.verb }}</h3>
+        <p>{{ area.summary }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section stats">
+  <div><strong>4</strong><span>physical robotic testbeds built and deployed</span></div>
+  <div><strong>11</strong><span>peer-reviewed publications, plus 4 under review</span></div>
+  <div><strong>$10M</strong><span>ONR program supporting current research</span></div>
+  <div><strong>Best Paper</strong><span>nominee, GECCO 2026</span></div>
+</section>
+
+<section class="section">
+  <h2>Highlights</h2>
+  <ul class="news-list">
+    {% for item in site.data.highlights %}
+      <li>
+        <time>{{ item.when }}</time>
+        <span>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section contact-strip">
+  <h2>Get in touch</h2>
+  <p>
+    I welcome conversations about research collaborations, intelligent manufacturing, and
+    optimization and learning for physical systems.
+  </p>
+  <p><a class="btn btn-solid" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+</section>

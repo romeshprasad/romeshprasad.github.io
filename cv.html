@@ -1,0 +1,88 @@
+---
+layout: default
+title: Curriculum Vitae
+permalink: /cv/
+---
+
+{% if site.cv_pdf != "" %}
+<p><a class="btn btn-solid" href="{{ site.cv_pdf | relative_url }}">Download full CV (PDF)</a></p>
+{% endif %}
+
+<section class="cv-section">
+  <h2>Academic Appointments</h2>
+  <div class="cv-row">
+    <div><strong>Postdoctoral Research Fellow</strong>, University of Rhode Island
+      <p class="muted">Researcher on a $10M Office of Naval Research program developing resilient, AI-enabled manufacturing and operations systems.</p></div>
+    <time>2024 – Present</time>
+  </div>
+  <div class="cv-row">
+    <div><strong>Deep Reinforcement Learning Research Intern</strong>, National Renewable Energy Laboratory (DOE)</div>
+    <time>2023</time>
+  </div>
+  <div class="cv-row">
+    <div><strong>Doctoral Researcher</strong>, Syracuse University</div>
+    <time>2017 – 2024</time>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Education</h2>
+  <div class="cv-row">
+    <div><strong>Ph.D., Mechanical Engineering</strong>, Syracuse University
+      <p class="muted">Dissertation: <em>Recovery of Cyber Manufacturing Systems from False Data Injection Attacks on Sensors by Reinforcement Learning</em></p></div>
+    <time>2024</time>
+  </div>
+  <div class="cv-row">
+    <div><strong>M.S., Mechanical Engineering</strong>, Syracuse University</div>
+    <time></time>
+  </div>
+  <div class="cv-row">
+    <div><strong>B.Tech., Mechanical Engineering</strong>, University of Mumbai</div>
+    <time>2016</time>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Honors and Awards</h2>
+  <div class="cv-row"><div>Best Paper Nominee, Genetic and Evolutionary Computation Conference (GECCO)</div><time>2026</time></div>
+  <div class="cv-row"><div>Best Poster and Research Award, Syracuse University Research Day</div><time>2023</time></div>
+  <div class="cv-row"><div>Invited Talk and Presentation, ASME IMECE</div><time>2022</time></div>
+  <div class="cv-row"><div>Summer Research Fellowship, Syracuse University</div><time>2021, 2022</time></div>
+  <div class="cv-row"><div>30% Scholarship, Syracuse University Master's Education</div><time>2022</time></div>
+</section>
+
+<section class="cv-section">
+  <h2>Additional Research and Industry Experience</h2>
+  <div class="cv-row">
+    <div><strong>Graduate Researcher</strong>, Syracuse University
+      <p class="muted">Formaldehyde emissions from residential materials: controlled experiments, HPLC validation, CFD, and building-energy simulation; contributed to the SmART-Form app.</p></div>
+    <time>2018 – 2019</time>
+  </div>
+  <div class="cv-row">
+    <div><strong>Process Improvement Intern</strong>, Byrne Dairy
+      <p class="muted">Statistical analysis, design of experiments, and Six Sigma on a manufacturing improvement project: 23% efficiency gain, 15% less downtime, ~$700K/year added revenue.</p></div>
+    <time>2019</time>
+  </div>
+  <div class="cv-row">
+    <div><strong>GIS Analyst</strong>, HERE Maps
+      <p class="muted">LiDAR-derived road geometry for autonomous-vehicle mapping; workflow change reduced processing downtime by 20%.</p></div>
+    <time>2017</time>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Professional Service</h2>
+  <div class="cv-row"><div>Reviewer, ASME International Mechanical Engineering Congress and Exposition (IMECE)</div><time>2020 – Present</time></div>
+</section>
+
+<section class="cv-section">
+  <h2>Technical Expertise</h2>
+  <dl class="skills">
+    <dt>Reinforcement Learning</dt><dd>DQN, PPO, SAC, A2C, DDPG, multi-agent RL, environment and reward design</dd>
+    <dt>Optimization</dt><dd>Linear and mixed-integer programming, stochastic models, vehicle routing, scheduling, BRKGA, genetic algorithms, branch and bound</dd>
+    <dt>Machine Learning</dt><dd>MLP, RNN, LSTM, Transformers, vision-language models, graph neural networks, multimodal learning</dd>
+    <dt>High-Performance Computing</dt><dd>CUDA, GPU programming, multi-GPU optimization, parallel computing</dd>
+    <dt>Robotics &amp; Systems</dt><dd>ROS2, MOSA architectures, Unity ML-Agents, digital twins, SolidWorks</dd>
+    <dt>Software</dt><dd>Python, PyTorch, Ray RLlib, Stable-Baselines3, Gymnasium, PyTorch Geometric, Gurobi, CPLEX, Hexaly, Git</dd>
+  </dl>
+</section>

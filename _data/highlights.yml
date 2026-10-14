@@ -1,0 +1,19 @@
+# Short highlights shown on the Home page, newest first. Markdown allowed.
+
+- when: "2026"
+  text: "GECCO 2026 paper introducing the **VRP-RPD** nominated for **Best Paper**."
+
+- when: "2026"
+  text: "Multimodal CNC monitoring work published in **Sensors**."
+
+- when: "Summer 2026"
+  text: "Designed and taught a seminar series on **reinforcement learning for combinatorial optimization**."
+
+- when: "Fall 2025"
+  text: "Instructor of record for **Machine Learning for Industry 4.0**; piloted a six-level AI-use disclosure framework with students."
+
+- when: "2024"
+  text: "Joined the University of Rhode Island as a Postdoctoral Research Fellow on a **$10M Office of Naval Research** program."
+
+- when: "2024"
+  text: "Ph.D. in Mechanical Engineering, Syracuse University."

@@ -1,23 +1,94 @@
-# Research thrusts. Shown as cards on the Home page and in detail on Research.
+# The four research directions. Shown on Home (cards), Vision (summary) and Research (detail).
 
-- title: "[Research Area 1]"
-  summary: "[One or two sentences for the home page card.]"
-  description: |
-    [A longer paragraph for the Research page: the problem, why it matters,
-    and the approach the lab takes. Markdown is allowed.]
-  image: ""
-  funding: "[Funding agency, grant number — optional]"
+- id: sense
+  verb: Sense
+  title: "Manufacturing Systems That Sense"
+  question: "How much, and what kind of, information does an autonomous manufacturing system need to make reliable decisions?"
+  summary: "Turning heterogeneous sensor, machine, and visual data into representations that are actually useful for decisions."
+  work:
+    - title: "Multimodal CNC process monitoring"
+      text: "Fused multiple temporal sensor streams with deep learning to classify toolpaths and machining conditions on a physical CNC machine, including cut-type identification and G-code regeneration."
+      tag: "Published in Sensors, 2026"
+    - title: "Vision-language models for dynamic routing"
+      text: "Using single-camera perception and vision-language models on a physical AGV testbed to interpret changing conditions and guide vehicles to newly arriving orders in real time, without re-solving the full routing problem after every event."
+      tag: "Ongoing"
+    - title: "Cyber-physical failure detection"
+      text: "Correlated network-level cyber alerts with physical-system alerts to detect manufacturing failures (89% F1 score)."
+      tag: "Ph.D. research"
+  next: >
+    More sensing does not automatically mean better state awareness. Measurements can be noisy,
+    redundant, or contradictory, and learned perception models bring their own uncertainty.
+    I want to understand how physical measurements, machine states, visual observations, and
+    production information can be combined into decision-relevant representations. The goal is
+    to determine what a system needs to know in order to act, not simply to observe more of the factory.
 
-- title: "[Research Area 2]"
-  summary: "[One or two sentences for the home page card.]"
-  description: |
-    [Longer description.]
-  image: ""
-  funding: ""
+- id: decide
+  verb: Decide
+  title: "Manufacturing Systems That Decide"
+  question: "How should the structure of a manufacturing problem determine the method used to make the decision?"
+  summary: "Understanding when reinforcement learning, mathematical optimization, or metaheuristics are the right tool, and why."
+  work:
+    - title: "VRP-RPD: a new combinatorial problem"
+      text: "Formulated the Vehicle Routing Problem with Resource-Constrained Pickup and Delivery, in which shared, redeployable resources are dropped off and picked up by different vehicles, and developed a problem-specific biased random-key genetic algorithm (BRKGA)."
+      tag: "GECCO 2026 · Best Paper Nominee"
+    - title: "Why reinforcement learning falls short, and when it won't"
+      text: "A single-agent RL approach came within 15–20% of the metaheuristic. Current experiments point to the critic converging before the policy finds high-quality solutions in long-horizon problems. I am now extending this work to multi-agent RL to exploit inter-vehicle coordination."
+      tag: "Ongoing"
+    - title: "GPU-scale search"
+      text: "Contributing to BrkgaCuda 3.0, a multi-GPU asynchronous island-model framework for large-scale biased random-key genetic algorithms."
+      tag: "Under review"
+    - title: "From natural language to solver"
+      text: "Built an agentic LLM pipeline (constraint validator, formulation generator, solver orchestrator, summarizer) that turns natural-language routing and scheduling tasks into formal models and runs them through in-house BRKGA and deep-RL solvers."
+      tag: "Prototype"
+  next: >
+    My objective is not to show that one paradigm is universally superior. I want to understand
+    how problem structure, scale, decision horizon, state and action representation, reward design,
+    and learning architecture determine which approach succeeds. In the long term, this could enable
+    manufacturing systems that characterize the decision problem they face and select or combine
+    computational tools accordingly.
 
-- title: "[Research Area 3]"
-  summary: "[One or two sentences for the home page card.]"
-  description: |
-    [Longer description.]
-  image: ""
-  funding: ""
+- id: act
+  verb: Act
+  title: "Manufacturing Systems That Act"
+  question: "How can a high-level decision be carried out on whatever physical equipment happens to be available?"
+  summary: "Treating the step from algorithm output to coordinated equipment behavior as a research problem in its own right."
+  work:
+    - title: "Vendor-agnostic coordination architecture"
+      text: "Co-developed a distributed architecture based on the Modular Open Systems Approach (MOSA) and ROS2 that separates high-level manufacturing decisions from vendor-specific control, so equipment can be added or removed without re-architecting the control stack."
+      tag: "IEEE T-ASE, under review"
+    - title: "Material-handling testbed"
+      text: "Built a 9-robot, 5-conveyor testbed with automated storage and retrieval (ASRS) and AGVs from four vendors, modeled on large-scale fulfillment operations."
+      tag: "Physical testbed"
+    - title: "Shipbuilding process testbed"
+      text: "Applied the same architecture to a physically distinct process line that integrates a CNC machine, a laser cutter, robots, and conveyors."
+      tag: "Physical testbed"
+    - title: "Algorithm-to-action on an AGV floor"
+      text: "Built a grid-based factory-floor testbed in which cobots execute BRKGA routing solutions, coupled with multi-agent path finding for local collision and priority resolution."
+      tag: "Physical testbed"
+  next: >
+    I want to move beyond vendor abstraction toward capability representation. A decision-maker
+    should be able to reason about what must be done (transport, manipulate, process, inspect)
+    without knowing which specific machine will do it. The system should then discover which resources
+    provide those capabilities and translate the decision into equipment-specific actions. The aim is
+    manufacturing intelligence that keeps working as hardware is added, replaced, or reconfigured.
+
+- id: adapt
+  verb: Adapt
+  title: "Manufacturing Systems That Adapt"
+  question: "How does a system recognize that its plan no longer fits the world, and what should it do next?"
+  summary: "Closing the loop: observing the consequences of actions and using them to decide what happens next."
+  work:
+    - title: "RL-based recovery of cyber-manufacturing systems"
+      text: "Developed a two-stage reinforcement learning framework that reroutes in-process and newly arriving parts around compromised resources after sensor failures and false-data-injection attacks, while production continues."
+      tag: "Ph.D. dissertation"
+    - title: "Validated on physical hardware"
+      text: "Deployed recovery policies on a testbed with 4 robots, an AGV, and 3 manufacturing processes, reducing recovery downtime by 12%, with digital twins in Unity and SolidWorks for policy prototyping."
+      tag: "Physical testbed"
+    - title: "Predictive recovery control"
+      text: "Investigated LSTM-based forecasting of future system states to correct the main controller during recovery."
+      tag: "Ph.D. research"
+  next: >
+    Real factories face new jobs, changing conditions, resource shortages, delays, and unexpected
+    outcomes, not only a predefined class of failures. I want to study when an existing plan should
+    be abandoned, what information should trigger replanning, and how the outcomes of past actions
+    should shape future decisions.

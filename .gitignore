@@ -1,3 +1,6 @@
+# Private source documents (CV, statements) — never publish
+romesh_documents/
+
 _site/
 .sass-cache/
 .jekyll-cache/

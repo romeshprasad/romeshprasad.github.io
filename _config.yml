@@ -1,30 +1,30 @@
 # ---------------------------------------------------------------
-# Site settings — edit these first
+# Site settings
 # ---------------------------------------------------------------
-title: "[Lab Name]"
-short_name: "[LAB]"
-tagline: "[One-sentence description of what the lab studies]"
-description: "[Lab Name] at the University of Rhode Island — [research focus]."
+title: "Romesh Prasad"
+short_name: "Romesh Prasad"
+position: "Postdoctoral Research Fellow"
+affiliation: "University of Rhode Island"
+tagline: "I build manufacturing systems that turn intelligence into physical action: systems that sense, decide, act, and adapt."
+description: "Romesh Prasad: research on intelligent manufacturing systems, reinforcement learning, combinatorial optimization, and vendor-agnostic automation."
+email: "prasadromesh19@gmail.com"
+location: "Kingston, Rhode Island"
 
-institution: "University of Rhode Island"
-department: "[Department Name]"
-pi_name: "Romesh Satish Prasad"
-email: "romeshsatish.prasad@uri.edu"
-address: |
-  [Building, Room]
-  [Street Address]
-  Kingston, RI 02881
+# Profile photo (optional). Put a square image at assets/img/profile.jpg and set:
+#   photo: /assets/img/profile.jpg
+photo: ""
 
-# Social / academic profiles (leave blank to hide)
+# CV download
+cv_pdf: /assets/files/Romesh_Prasad_CV.pdf
+
+# Academic profiles (leave blank to hide)
 google_scholar: ""   # e.g. https://scholar.google.com/citations?user=XXXX
-orcid: ""            # e.g. https://orcid.org/0000-0000-0000-0000
-github: ""           # e.g. https://github.com/your-lab
-linkedin: ""
+linkedin: ""         # e.g. https://www.linkedin.com/in/XXXX
+github: ""           # e.g. https://github.com/romeshprasad
+orcid: ""
 
 # ---------------------------------------------------------------
 # GitHub Pages URL settings
-#   - Repo named <username>.github.io  -> baseurl: ""
-#   - Any other repo name (e.g. "lab") -> baseurl: "/lab"
 # ---------------------------------------------------------------
 url: "https://romeshprasad.github.io"
 baseurl: ""
@@ -33,18 +33,16 @@ baseurl: ""
 nav:
   - title: Home
     url: /
+  - title: Vision
+    url: /vision/
   - title: Research
     url: /research/
-  - title: People
-    url: /people/
   - title: Publications
     url: /publications/
-  - title: News
-    url: /news/
-  - title: Join Us
-    url: /join/
-  - title: Contact
-    url: /contact/
+  - title: Teaching
+    url: /teaching/
+  - title: CV
+    url: /cv/
 
 # Build settings
 markdown: kramdown
@@ -58,3 +56,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - romesh_documents

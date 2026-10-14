@@ -1,0 +1,82 @@
+---
+layout: default
+title: Research
+subtitle: "Making manufacturing systems that sense, decide, act, and adapt, and validating them on physical hardware."
+permalink: /research/
+---
+
+<nav class="thrust-nav" aria-label="Research directions">
+  {% for area in site.data.research %}
+    <a href="#{{ area.id }}"><span>0{{ forloop.index }}</span> {{ area.verb }}</a>
+  {% endfor %}
+</nav>
+
+{% for area in site.data.research %}
+<section class="thrust" id="{{ area.id }}">
+  <p class="eyebrow-dark">Direction 0{{ forloop.index }}</p>
+  <h2>{{ area.title }}</h2>
+  <p class="thrust-question">{{ area.question }}</p>
+
+  <h3 class="label">Work so far</h3>
+  <div class="work-grid">
+    {% for w in area.work %}
+      <article class="work">
+        <h4>{{ w.title }}</h4>
+        <p>{{ w.text }}</p>
+        {% if w.tag %}<span class="tag">{{ w.tag }}</span>{% endif %}
+      </article>
+    {% endfor %}
+  </div>
+
+  <h3 class="label">Where I'm taking it</h3>
+  <p class="thrust-next">{{ area.next }}</p>
+</section>
+{% endfor %}
+
+<section class="thrust" id="testbeds">
+  <p class="eyebrow-dark">From algorithm to hardware</p>
+  <h2>Physical Testbeds</h2>
+  <p>
+    I have designed, built, and deployed algorithms on four physically distinct robotic testbeds.
+    Each one is a place where decisions made by an algorithm have to survive contact with real equipment.
+  </p>
+  <div class="work-grid">
+    <article class="work">
+      <h4>Cyber-manufacturing recovery</h4>
+      <p>4 robots, an AGV, and 3 manufacturing processes representing a cutting process. Used to deploy RL recovery policies after sensor attacks.</p>
+      <span class="tag">Syracuse University</span>
+    </article>
+    <article class="work">
+      <h4>AGV / cobot factory floor</h4>
+      <p>Grid-structured floor where cobots act as AGVs executing BRKGA routing solutions with multi-agent path finding.</p>
+      <span class="tag">University of Rhode Island</span>
+    </article>
+    <article class="work">
+      <h4>Vendor-agnostic material handling</h4>
+      <p>9 robots, 5 conveyors, an ASRS, and AGVs from four vendors, coordinated over a MOSA/ROS2 architecture.</p>
+      <span class="tag">University of Rhode Island</span>
+    </article>
+    <article class="work">
+      <h4>Shipbuilding process automation</h4>
+      <p>CNC machine, laser cutter, robots, and conveyors moving parts through a shipbuilding-style process on the same architecture.</p>
+      <span class="tag">University of Rhode Island</span>
+    </article>
+  </div>
+</section>
+
+<section class="thrust" id="other">
+  <p class="eyebrow-dark">Beyond manufacturing</p>
+  <h2>Other Research</h2>
+  <div class="work-grid">
+    <article class="work">
+      <h4>RL for power-grid resilience</h4>
+      <p>At the National Renewable Energy Laboratory, I designed an attacker–defender RL framework that discovered failure modes in grid frequency controllers, benchmarking PPO, A2C, DQN, DDPG, and Q-learning across 120 attack scenarios on HPC.</p>
+      <span class="tag">NREL (DOE) · IEEE PESGM 2024</span>
+    </article>
+    <article class="work">
+      <h4>Manufacturing digital twins</h4>
+      <p>Unity-based digital twins of manufacturing systems with ML-Agents (PPO, DQN) for simulating failures and bottlenecks and prototyping control policies before physical deployment.</p>
+      <span class="tag">Simulation-to-hardware</span>
+    </article>
+  </div>
+</section>
