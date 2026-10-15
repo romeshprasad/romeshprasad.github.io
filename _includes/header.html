@@ -2,15 +2,46 @@
   <div class="container header-inner">
     <a class="brand" href="{{ '/' | relative_url }}">{{ site.short_name }}</a>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+    <div class="header-actions">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <nav class="site-nav">
+        {% for link in site.nav %}
+          {% assign link_url = link.url | relative_url %}
+          {% assign page_url = page.url | relative_url %}
+          <a href="{{ link_url }}" {% if page_url == link_url %}aria-current="page"{% endif %}>{{ link.title }}</a>
+        {% endfor %}
+      </nav>
 
-    <nav class="site-nav">
-      {% for link in site.nav %}
-        {% assign link_url = link.url | relative_url %}
-        {% assign page_url = page.url | relative_url %}
-        <a href="{{ link_url }}" {% if page_url == link_url %}aria-current="page"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
-    </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+    </div>
   </div>
 </header>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+    function isDark() {
+      var t = root.getAttribute('data-theme');
+      return t ? t === 'dark' : media.matches;
+    }
+    function sync() {
+      root.classList.toggle('dark-active', isDark());
+      btn.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
+    });
+    if (media.addEventListener) media.addEventListener('change', sync);
+    sync();
+  })();
+</script>
